@@ -117,3 +117,90 @@ musicPlayer.pause();
 musicPlayer.stop();
 
 ```
+
+# Inheritance
+
+Inheritance is one of the most important features of OOP. Any class may inherit from another, which
+means that it will have all the members of the class from which it inherits. In OOP terminology, the
+class being inherited from (derived from) is the parent class (also known as the base class). Classes in
+C# may derive only from a single base class directly, although of course that base class may have a base
+class of its own, and so on.
+
+## Usage/Examples
+
+```javascript
+//* Inheritance
+
+class Person {
+  name: string;
+  constructor(name: string) {
+    this.name = name;
+  }
+  getInfo() {
+    console.log(`Hello! I am ${this.name} 🙂`);
+  }
+
+  getSleep(sleepingHours: number) {
+    console.log(`${this.name} sleeps ${sleepingHours} hours!!`);
+  }
+}
+
+class Student extends Person {
+
+  age: number;
+  address: string;
+
+  constructor(name: string, age: number, address: string) {
+    super(name);
+    this.age = age;
+    this.address = address;
+  }
+
+
+  getStudenttInfo() {
+    console.log(
+      `Hello! I am ${this.name} 🙂, I am ${this.age} years old and my address is : ${this.address}`,
+    );
+  }
+
+}
+
+const lisa = new Student("lisa muhury", 21, "jamal khan in chittagong 🖐️");
+lisa.getStudenttInfo();
+lisa.getSleep(10);
+
+class Teacher extends Person {
+
+  course: string;
+  designation: string;
+
+  constructor(name: string, course: string, designation: string) {
+    super(name);
+    this.name = name;
+    this.course = course;
+    this.designation = designation;
+  }
+
+
+  getTeacherInfo() {
+    console.log(
+      `Hello! I am ${this.name} 🙂, I am your ${this.course} teacher ✋! and
+       my designation is : ${this.designation}`,
+    );
+  }
+
+
+  takeClass(numOfClass: number) {
+    console.log(`${this.name} taking ${numOfClass} hours class everyday!`);
+  }
+}
+
+const teacher = new Teacher(
+  "Ashfak Habib",
+  "Computer Network",
+  "Assistant Professor",
+);
+
+teacher.getTeacherInfo();
+
+```
