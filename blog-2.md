@@ -10,3 +10,10 @@ modular method of programming gives you much more versatility and provides more 
 code reuse.
 
 Object-Oriented Programming (OOP) is built on four fundamental principles, often referred to as the "pillars" of OOP. These principles help developers create modular, maintainable, and scalable software systems.
+
+## Pillars of OOP
+
+- Encapsulation
+- Abstraction
+- Inheritance
+- Polymorphism
