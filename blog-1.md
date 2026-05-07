@@ -1,3 +1,5 @@
+How TypeScript Generics Keep Code Reusable and Type-Safe
+
 # Introduction
 
 In TypeScript, building applications often requires working with different types of data such as strings, numbers, objects, or API responses. Writing separate functions or components for each type can quickly become repetitive and difficult to maintain. This is where Generics come in.
