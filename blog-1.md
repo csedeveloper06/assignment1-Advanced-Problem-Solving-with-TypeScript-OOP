@@ -1,4 +1,4 @@
-How TypeScript Generics Keep Code Reusable and Type-Safe
+# How TypeScript Generics Keep Code Reusable and Type-Safe
 
 # Introduction
 
