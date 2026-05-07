@@ -204,3 +204,86 @@ const teacher = new Teacher(
 teacher.getTeacherInfo();
 
 ```
+
+# Polymorphism
+
+Polymorphism is an extremely useful technique for performing tasks with a minimum of code on different objects descending from a single class. It isn’t just classes sharing the same parent class that can
+make use of polymorphism. It is also possible to treat, say, a child and a grandchild class in the same
+way, as long as there is a common class in their inheritance hierarchy.
+
+## Usage/Examples
+
+```javascript
+
+class Person {
+  getSleep() {
+    console.log("I get sleep for 10 hours");
+  }
+}
+
+class Student {
+  getSleep() {
+    console.log("I get sleep for 6 hours");
+  }
+}
+class NextLevelDeveloper {
+  getSleep() {
+    console.log("I get sleep for 5 hours");
+  }
+}
+
+class Shape {
+  getArea(): number {
+    return 0;
+  }
+}
+
+class Circle extends Shape {
+  //? area = pi * r * r
+
+  radius: number;
+  constructor(radius: number) {
+    super();
+    this.radius = radius;
+  }
+  getArea(): number {
+    return Math.PI * this.radius * this.radius;
+  }
+}
+class Rectangle extends Shape {
+  //? area =   height * width
+  height: number;
+  width: number;
+  constructor(height: number, width: number) {
+    super();
+    this.height = height;
+    this.width = width;
+  }
+  getArea(): number {
+    return this.height * this.width;
+  }
+}
+const getSleepingHours = (param: Person) => {
+  param.getSleep();
+};
+const getArea = (param: Shape) => {
+  param.getArea();
+};
+
+const person = new Person();
+const student = new Student();
+const proDeveloper = new NextLevelDeveloper();
+
+const shape = new Shape();
+const circle = new Circle(5);
+const rectangle = new Rectangle(3, 9);
+
+getSleepingHours(person);
+getSleepingHours(student);
+getSleepingHours(proDeveloper);
+
+getArea(shape);
+getArea(circle);
+getArea(rectangle);
+
+```
