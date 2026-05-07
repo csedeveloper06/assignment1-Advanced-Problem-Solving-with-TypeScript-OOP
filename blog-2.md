@@ -17,3 +17,43 @@ Object-Oriented Programming (OOP) is built on four fundamental principles, often
 - Abstraction
 - Inheritance
 - Polymorphism
+
+# Encapsulation
+
+Encapsulation keeping data and related logic together inside a class while hiding unnecessary internal details. Instead of allowing every file to directly modify data, the class controls how data changes. Encapsulation hides internal state and implementation details behind a public API. In TypeScript, the private, protected, and readonly modifiers enforce this at compile time.
+
+## Usage/Examples
+
+```javascript
+
+class BankAccount {
+  public readonly userId: number;
+  public userName: string;
+  private userBalance: number;
+
+  constructor(userId: number, userName: string, userBalance: number) {
+    this.userId = userId;
+    this.userName = userName;
+    this.userBalance = userBalance;
+  }
+
+  private addBalance(balance: number) {
+    this.userBalance = this.userBalance + balance;
+  }
+
+  callHiddenMethod(balance: number) {
+    this.addBalance(balance);
+  }
+}
+
+class StudentBankAccount extends BankAccount {
+   test() {
+      this.callHiddenMethod (100);
+     }
+}
+
+const account = new BankAccount(31, "farida", 100);
+console.log(account.callHiddenMethod(100));
+
+
+```
