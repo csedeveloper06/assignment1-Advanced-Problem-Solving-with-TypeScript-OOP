@@ -150,3 +150,7 @@ getIntersection([1, 2, 3, 4, 5], [3, 4, 5, 6, 7])[
 ## problem-7 : Solution
 
 This solution demonstrates how to find common elements between two arrays using the filter() and includes() methods in TypeScript. The function efficiently compares two arrays and returns only the shared values.
+
+# Conclusion
+
+This project helped me practice important TypeScript concepts such as functions, interfaces, classes, generics, union types, type guards, and array methods. Through these problems, I improved my understanding of writing clean, reusable, and type-safe code in TypeScript.
