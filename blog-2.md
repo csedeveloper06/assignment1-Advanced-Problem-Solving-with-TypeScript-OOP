@@ -57,3 +57,63 @@ console.log(account.callHiddenMethod(100));
 
 
 ```
+
+# Abstraction
+
+In Typescript, the abstract Object-Oriented Programming (OOP) technique is a way to define a "blueprint" for other classes. Abstraction means: hiding complex internal implementation details and showing only the essential features to the user. Here, the user knows what something does, but does not need to know how it works internally.
+
+## Usage/Examples
+
+```javascript
+//* abstraction ==> Idea. implemented in 2 ways: 1. interface, 2. abstract class
+
+interface IMediaPlayer {
+  play(): void;
+  pause(): void;
+  stop(): void;
+}
+
+//? implementation IMediaPlayer
+
+ class MusicPlayer implements IMediaPlayer {
+   play(): void {
+    console.log("Music is playing now! 😍");
+  }
+   pause(): void {
+    console.log("Music is paused now! 🤓");   }
+  stop(): void {
+    console.log("Music is stopped now! 🙄");
+  }
+ }
+
+ const musicPlayer = new MusicPlayer();
+ musicPlayer.play();
+ musicPlayer.pause();
+ musicPlayer.stop();
+
+//* abstract class implementation
+
+abstract class MediaPlayer {
+  abstract play(): void;
+  abstract pause(): void;
+  abstract stop(): void;
+}
+
+class MusicPlayer extends MediaPlayer {
+  play(): void {
+    console.log("Music is playing now! 😍");
+  }
+  pause(): void {
+    console.log("Music is paused now! 🤓");
+  }
+  stop(): void {
+    console.log("Music is stopped now! 🙄");
+  }
+}
+
+const musicPlayer = new MusicPlayer();
+musicPlayer.play();
+musicPlayer.pause();
+musicPlayer.stop();
+
+```
