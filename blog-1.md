@@ -1,5 +1,7 @@
 # How TypeScript Generics Keep Code Reusable and Type-Safe
 
+Generics in TypeScript allow developers to write flexible and reusable functions, components, and data structures without losing type safety. Instead of locking a function or component to a single data type, generics introduce a type placeholder that adapts based on how the code is used. This ensures that the same piece of logic can work with different types—such as strings, numbers, or objects—while still maintaining strict type checking. As a result, generics help reduce code duplication, improve maintainability, and make large-scale applications more reliable and scalable.
+
 # Introduction
 
 In TypeScript, building applications often requires working with different types of data such as strings, numbers, objects, or API responses. Writing separate functions or components for each type can quickly become repetitive and difficult to maintain. This is where Generics come in.
